@@ -535,6 +535,8 @@ function print_lunch_menu()
     echo "You're building on" $uname
     if [ "$(uname)" = "Darwin" ] ; then
        echo "  (ohai, iSheep!!)"
+    else
+       echo "  (ohai, CheekyBastards!!)"
     fi
     echo
     if [ "z${CUSTOM_DEVICES_ONLY}" != "z" ]; then
@@ -558,6 +560,11 @@ function print_lunch_menu()
        echo "... time to mka bacon!!"
     fi
 
+    if [ "z${CUSTOM_DEVICES_ONLY}" != "z" ]; then
+       echo " "
+       echo "... dont worry we'll make bacon toghether!!"
+    fi
+
     echo
 }
 
@@ -576,10 +583,9 @@ function brunch()
 function breakfast()
 {
     target=$1
-    local variant=$2
     CUSTOM_DEVICES_ONLY="true"
     unset LUNCH_MENU_CHOICES
-    for f in `/bin/ls vendor/nexus/vendorsetup.sh 2> /dev/null`
+    for f in `/bin/ls vendor/screwd/vendorsetup.sh 2> /dev/null`
         do
             echo "including $f"
             . $f
@@ -595,11 +601,8 @@ function breakfast()
             # A buildtype was specified, assume a full device name
             lunch $target
         else
-            # This is probably just the nexus model name
-            if [ -z "$variant" ]; then
-                variant="userdebug"
-            fi
-            lunch nexus_$target-$variant
+            # This is the Unholy model name
+            lunch unholy_$target-userdebug
         fi
     fi
     return $?
