@@ -133,12 +133,12 @@ function check_product()
         return
     fi
 
-    if (echo -n $1 | grep -q -e "^aosp_") ; then
-       CUSTOM_BUILD=
+    if (echo -n $1 | grep -q -e "^unholy_") ; then
+       UNHOLY_BUILD=$(echo -n $1 | sed -e 's/^unholy_//g')
     else
-       CUSTOM_BUILD=$1
+       UNHOLY_BUILD=
     fi
-    export CUSTOM_BUILD
+    export UNHOLY_BUILD
 
         TARGET_PRODUCT=$1 \
         TARGET_BUILD_VARIANT= \
