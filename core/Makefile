@@ -1087,7 +1087,7 @@ INTERNAL_SYSTEMIMAGE_FILES := $(filter $(TARGET_OUT)/%, \
     $(RECOVERY_RESOURCE_ZIP))
 
 systemimage-changelog: $(INTERNAL_SYSTEMIMAGE_FILES)
-	@echo -e "Making changelog!"
+	@echo "Making changelog!"
 	$(hide) APKCERTS=$(APKCERTS_FILE) ./vendor/unholy/tools/changelog
 
 .PHONY: systemimage-changelog
