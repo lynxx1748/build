@@ -585,7 +585,7 @@ function breakfast()
     target=$1
     CUSTOM_DEVICES_ONLY="true"
     unset LUNCH_MENU_CHOICES
-    for f in `/bin/ls vendor/screwd/vendorsetup.sh 2> /dev/null`
+    for f in `/bin/ls vendor/unholy/vendorsetup.sh 2> /dev/null`
         do
             echo "including $f"
             . $f

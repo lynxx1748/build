@@ -179,7 +179,7 @@ include $(BUILD_SYSTEM)/node_fns.mk
 include $(BUILD_SYSTEM)/product.mk
 include $(BUILD_SYSTEM)/device.mk
 
-# A SCREWD_BUILD build needs only the SCREWD product makefiles.
+# An UNHOLY_BUILD build needs only the Unholy product makefiles.
 ifneq ($(UNHOLY_BUILD),)
   all_product_configs := $(shell ls vendor/unholy/products/unholy_$(UNHOLY_BUILD).mk)
 else
