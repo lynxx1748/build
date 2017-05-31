@@ -679,9 +679,9 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
       oem_props, oem_dict, OPTIONS.info_dict))
 
   script.Print("\m/\m/\m/\m/\m/\m/\m/\m/\m/\m/\m/\m/\m/\m/")
-  script.Print("")
+  script.Print(" ")
   script.Print("          ||| ANDROID 7.1.2 |||           ")
-  script.Print("")
+  script.Print(" ")
   script.Print("_____  __      ______       ______        ");
   script.Print("__  / / /_________  /__________  /____  __");
   script.Print("_  / / /__  __ \_  __ \  __ \_  /__  / / /");
@@ -693,8 +693,7 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
   script.Print("       __  / / /  _ \_ | / /_  ___/       ");
   script.Print("       _  /_/ //  __/_ |/ /_(__  )        ");
   script.Print("       /_____/ \___/_____/ /____/         ");
-  script.Print("")
-  script.Print("")
+  script.Print(" ")
   script.Print("\m/\m/\m/\m/\m/\m/\m/\m/\m/\m/\m/\m/\m/\m/")
 
   script.AppendExtra("ifelse(is_mounted(\"/system\"), unmount(\"/system\"));")
