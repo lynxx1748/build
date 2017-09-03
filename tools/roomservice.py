@@ -43,7 +43,7 @@ DEBUG = False
 default_manifest = ".repo/manifest.xml"
 
 custom_local_manifest = ".repo/local_manifests/unholy_manifest.xml"
-custom_default_revision = "n7"
+custom_default_revision = "n7x-caf"
 custom_dependencies = "unholy.dependencies"
 org_manifest = "UnholyDevs"  # leave empty if org is provided in manifest
 org_display = "UnholyDevs"  # needed for displaying
