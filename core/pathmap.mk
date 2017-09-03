@@ -67,7 +67,7 @@ endef
 #
 # $(1): name
 # $(2): path
-+#
+#
 define project-set-path
 $(eval pathmap_PROJ += $(1):$(2))
 endef
