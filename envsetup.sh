@@ -513,7 +513,7 @@ function choosecombo()
     destroy_build_var_cache
 }
 
-# Clear this variable.  It will be built up again when the vendorsetup.sh
+# Clear this variable.  It will be built up again when the caf-vendorsetup.sh
 # files are included at the end of this file.
 unset LUNCH_MENU_CHOICES
 function add_lunch_combo()
@@ -585,7 +585,7 @@ function breakfast()
     target=$1
     CUSTOM_DEVICES_ONLY="true"
     unset LUNCH_MENU_CHOICES
-    for f in `/bin/ls vendor/unholy/vendorsetup.sh 2> /dev/null`
+    for f in `/bin/ls vendor/unholy/caf-vendorsetup.sh 2> /dev/null`
         do
             echo "including $f"
             . $f
@@ -1749,10 +1749,10 @@ if [ "x$SHELL" != "x/bin/bash" ]; then
     esac
 fi
 
-# Execute the contents of any vendorsetup.sh files we can find.
-for f in `test -d device && find -L device -maxdepth 4 -name 'vendorsetup.sh' 2> /dev/null | sort` \
-         `test -d vendor && find -L vendor -maxdepth 4 -name 'vendorsetup.sh' 2> /dev/null | sort` \
-         `test -d product && find -L product -maxdepth 4 -name 'vendorsetup.sh' 2> /dev/null | sort`
+# Execute the contents of any caf-vendorsetup.sh files we can find.
+for f in `test -d device && find -L device -maxdepth 4 -name 'caf-vendorsetup.sh' 2> /dev/null | sort` \
+         `test -d vendor && find -L vendor -maxdepth 4 -name 'caf-vendorsetup.sh' 2> /dev/null | sort` \
+         `test -d product && find -L product -maxdepth 4 -name 'caf-vendorsetup.sh' 2> /dev/null | sort`
 do
     echo "including $f"
     . $f
